@@ -15,7 +15,7 @@ let questions;
 let correctAnswers;
 let candidateAnswers;
 
-
+//Test
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 let candidateName = input.question("What's your name? ");
