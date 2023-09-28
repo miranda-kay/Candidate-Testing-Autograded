@@ -11,11 +11,11 @@ let candidateAnswer = "";
 
 
 //TODO: Variables for Part 2
-let questions = ["Who was the first American woman in space?", "True or false: 5 kilometer == 5000 meters?", 
-"(5 + 3)/2 * 10 = ?", "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?",
-"What is the minimum crew size for the ISS?"];
+let questions = ["Who was the first American woman in space? ", "True or false: 5 kilometer == 5000 meters? ", 
+"(5 + 3)/2 * 10 = ? ", "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ",
+"What is the minimum crew size for the ISS? "];
 let correctAnswers = ["Sally Ride", true, 40, "Trajectory", 30];
-let candidateAnswers;
+let candidateAnswers = " ";
 
 //Test
 function askForName() {
@@ -41,21 +41,14 @@ function gradeQuiz(candidateAnswers) {
 let score = 0;
 
 // score++ is another option
-score = score + 1
-
-  if (candidateAnswer == correctAnswer) {
-    console.log("Correct.");
-  } else {
-    console.log("Incorrect.");
+for (let i = 0; i < candidateAnswers.length; i++) { // In this loop we are trying to loop through an array. hint: look in the function above to get in idea
+  if (candidateAnswers == correctAnswers) { // in this statement you want to compare the candidate answers and the correct answers. make sure they are case sensitive
+    // what variable should be next to this operator? ++;
   }
-
-for (let i = 0; i < candidateAnswers.length; i++) {
-   console.log(candidateAnswers[i]);
-}
-
-for (let i = 0; i < correctAnswers.length; i++) {
-   console.log(correctAnswers[i]);
-}
+  console.log(`${i+1}) ${}`);
+  console.log(`Your Answer: ${}`);
+  console.log(`Correct Answer: ${}`);
+  console.log('\n');
 
   let grade = (score) / (5) * 100;  
   //TODO 3.2 use this variable to calculate the candidates score.
