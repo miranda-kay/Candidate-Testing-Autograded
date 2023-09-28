@@ -30,7 +30,7 @@ function askQuestion() {
 for (let i = 0; i < questions.length; i++) {
   let answer = input.question(questions[i]);
   console.log(questions[i]);
-  candidateAnswers. an array method (answer)
+  candidateAnswers.push
 }
 }
 

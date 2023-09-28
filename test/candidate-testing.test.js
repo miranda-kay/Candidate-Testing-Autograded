@@ -1,6 +1,6 @@
 const solution = require('../candidate-testing');
 
-describe("Candidate Testing solution", function() {
+describe("Candidate Testing solution"), function() {
 
 	// PART 1 // 
 	// candidateName tests //
@@ -97,4 +97,4 @@ describe("Candidate Testing solution", function() {
 
 	
  
- });
+ };
