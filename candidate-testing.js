@@ -30,7 +30,7 @@ function askQuestion() {
 for (let i = 0; i < questions.length; i++) {
   let answer = input.question(questions[i]);
   console.log(questions[i]);
-  candidateAnswers.push
+  candidateAnswers.push(answer)
 }
 }
 
@@ -45,14 +45,13 @@ for (let i = 0; i < candidateAnswers.length; i++) { // In this loop we are tryin
   if (candidateAnswers == correctAnswers) { // in this statement you want to compare the candidate answers and the correct answers. make sure they are case sensitive
     // what variable should be next to this operator? ++;
   }
-  console.log(`${i+1}) ${}`);
-  console.log(`Your Answer: ${}`);
-  console.log(`Correct Answer: ${}`);
+  console.log(`${i+1}) ${i}`);
+  console.log(`Your Answer: ${candidateAnswers}`);
+  console.log(`Correct Answer: ${correctAnswers}`);
   console.log('\n');
 
   let grade = (score) / (5) * 100;  
   //TODO 3.2 use this variable to calculate the candidates score.
-
 
   return grade;
 }
