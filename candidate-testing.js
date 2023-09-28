@@ -26,16 +26,22 @@ candidateName = input.question("What's your name? ");
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-candidateAnswer = input.question(question);
-}
 
 for (let i = 0; i < questions.length; i++) {
-   console.log(questions[i]);
+  let answer = input.question(questions[i]);
+  console.log(questions[i]);
+  candidateAnswers. an array method (answer)
 }
+}
+
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
+let score = 0;
+
+// score++ is another option
+score = score + 1
 
   if (candidateAnswer == correctAnswer) {
     console.log("Correct.");
@@ -51,7 +57,7 @@ for (let i = 0; i < correctAnswers.length; i++) {
    console.log(correctAnswers[i]);
 }
 
-  let grade = (Number of correctAnswers) / (5) * 100;  
+  let grade = (score) / (5) * 100;  
   //TODO 3.2 use this variable to calculate the candidates score.
 
 
