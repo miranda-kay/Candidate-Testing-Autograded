@@ -14,8 +14,8 @@ let candidateAnswer = "";
 let questions = ["Who was the first American woman in space? ", "True or false: 5 kilometer == 5000 meters? ", 
 "(5 + 3)/2 * 10 = ? ", "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ",
 "What is the minimum crew size for the ISS? "];
-let correctAnswers = ["Sally Ride", true, 40, "Trajectory", 30];
-let candidateAnswers = " ";
+let correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
+let candidateAnswers = [];
 
 //Test
 function askForName() {
@@ -28,8 +28,7 @@ function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
 for (let i = 0; i < questions.length; i++) {
-  let answer = input.question(questions[i]);
-  console.log(questions[i]);
+  let answer = input.question(`${questions[i]}`);
   candidateAnswers.push(answer)
 }
 }
@@ -38,23 +37,31 @@ for (let i = 0; i < questions.length; i++) {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-let score = 0;
+ let score = 0;
 
-// score++ is another option
-for (let i = 0; i < candidateAnswers.length; i++) { // In this loop we are trying to loop through an array. hint: look in the function above to get in idea
-  if (candidateAnswers == correctAnswers) { // in this statement you want to compare the candidate answers and the correct answers. make sure they are case sensitive
-    // what variable should be next to this operator? ++;
+
+ for (let i = 0; i < questions.length; i++) { 
+  if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) { 
+     score++;
   }
-  console.log(`${i+1}) ${i}`);
-  console.log(`Your Answer: ${candidateAnswers}`);
-  console.log(`Correct Answer: ${correctAnswers}`);
+  console.log(`${i+1}) ${questions[i]}`);
+  console.log(`Your Answer: ${candidateAnswers[i]}`);
+  console.log(`Correct Answer: ${correctAnswers[i]}`);
   console.log('\n');
-
-  let grade = (score) / (5) * 100;  
+ }
+  let grade = (score / questions.length) * 100;  
   //TODO 3.2 use this variable to calculate the candidates score.
+
+  if (grade >= 80) {
+  console.log("Pass") 
+  }else {
+    console.log("Fail")
+  }
 
   return grade;
 }
+
+
 
 function runProgram() {
   askForName();
